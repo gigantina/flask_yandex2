@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1>Миссия Колонизация Марса</h1>
+<h4>И на Марсе будут яблони цвести!</h4>
+<h2>Список профессий</h2>
+{% if status == 1 %}
+    <ul>
+        {% for prof in prof_list %}
+            <li>{{ prof }}
+            </li>
+        {% endfor %}
+    </ul>
+{% elif status == 0 %}
+    <ol>
+        {% for prof in prof_list %}
+            <li>{{ prof }}
+            </li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <h4>Неверный параметр</h4>
+{% endif %}
+</body>
+</html>

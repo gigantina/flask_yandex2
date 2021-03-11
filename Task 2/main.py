@@ -11,9 +11,11 @@ def index(prof):
     print(status)
     return render_template('index.html', status=status)
 
+
 @app.route('/<title>')
 def main(title):
     return render_template('index.html', title=title)
+
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
